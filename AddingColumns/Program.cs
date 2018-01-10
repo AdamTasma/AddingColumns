@@ -10,15 +10,12 @@ namespace AddingColumns
             string input1 = Console.ReadLine();
             Console.WriteLine("please enter a second 3 digit number");
             string input2 = Console.ReadLine();
-
-
-            //User Input Validation
-            //public string InputValidation()
-            //{
-            //    int stuff = 6;
-            //    stuff = 4;
-
-            //}
+            InputValidation(input1, input2);
+            
+        }
+        //User Input Validation
+        static void InputValidation(string input1, string input2)
+        {
             bool tryAgain = true;
             while (tryAgain == true)
             {
@@ -56,7 +53,7 @@ namespace AddingColumns
             }
             ColumnCompare(input1, input2);
         }
-        //CONVERTING TO ARRAYS METHOD
+        //Method to compare number columns
         static void ColumnCompare(string input1, string input2)
         {
             Console.WriteLine("Do your number columns add to the same amount?");
@@ -71,23 +68,3 @@ namespace AddingColumns
     }
 }
 
-//TryParse(input1, Int32);
-//do while loops. while they are in error, tell them what is wrong, and have them re-enter the data.
-//class myClass
-//{
-//    private bool verifyNums(string input1, string input2)
-//    {
-//        return input1.Length == input2.Length;
-//    }
-
-//}
-
-
-//ask for user input twice
-//confirm they are the same length with string.length.
-//if false give error message
-//if true...
-//convert input string tochararray
-//[x1,x2,x3]
-//convert to ints
-//return((x1 + y1) == (x2 + y2)
