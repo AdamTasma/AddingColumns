@@ -11,11 +11,19 @@ namespace AddingColumns
             Console.WriteLine("please enter a second 3 digit number");
             string input2 = Console.ReadLine();
 
+
             //User Input Validation
+            //public string InputValidation()
+            //{
+            //    int stuff = 6;
+            //    stuff = 4;
+
+            //}
             bool tryAgain = true;
             while (tryAgain == true)
             {
                 tryAgain = false;
+
                 while (input1.Length != 3)
                 {
                     Console.WriteLine("Your first number is not three digits long, please re-enter your first number");
@@ -46,9 +54,11 @@ namespace AddingColumns
                     tryAgain = true;
                 }
             }
-            
-
-            //CONVERTING TO ARRAYS
+            ColumnCompare(input1, input2);
+        }
+        //CONVERTING TO ARRAYS METHOD
+        static void ColumnCompare(string input1, string input2)
+        {
             Console.WriteLine("Do your number columns add to the same amount?");
             var inputArr1 = input1.ToCharArray();
             var inputArr2 = input2.ToCharArray();
@@ -56,18 +66,8 @@ namespace AddingColumns
             int[] intInputArr2 = Array.ConvertAll(inputArr2, c => (int)Char.GetNumericValue(c));
             Console.WriteLine(inputArr1[0] + inputArr2[0] == inputArr1[1] + inputArr2[1] && inputArr1[1] + inputArr2[1] == inputArr1[2] + inputArr2[2]);
             Console.ReadLine();
-
-
-
-
-            //Console.WriteLine(inputArr1);
-            //for (int i=0; i>inputArr1.Length; i++)
-            //{
-
-            //}
-            //return X1 + Y1 == X2 + Y2 == X3 + Y3;
-            //Console.ReadLine();
         }
+        
     }
 }
 
